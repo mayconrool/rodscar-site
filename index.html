@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rodscar · Carros e Motos Seminovos em São Luís</title>
+<meta name="description" content="Rodscar: compra, venda e troca de carros e motos seminovos em São Luís - MA. Posto Ana Terra, Av. João Pessoa, Sacavém/Filipinho. Avaliação na hora pelo WhatsApp.">
+<meta name="theme-color" content="#0d0d0d">
+<meta property="og:title" content="Rodscar · Carros e Motos Seminovos">
+<meta property="og:description" content="Compra, venda e troca de carros e motos seminovos em São Luís - MA.">
+<meta property="og:image" content="assets/img/hero-a.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Saira+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero-a.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Símbolo R (reutilizado) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="r-mark" viewBox="0 0 450 330">
+      <path d="M2 14 L120 4 L120 327 L4 232 Z"/>
+      <path d="M130 4 L302 4 L444 167 L272 167 L130 17 Z"/>
+      <path d="M130 180 L282 180 L444 324 L287 324 L130 187 Z"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.24.55.79 1.9.86 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.89 1.04.93 1.92 1.22 2.19 1.35.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.34Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <linearGradient id="gSpeed" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" style="stop-color: var(--white)"/><stop offset=".6" style="stop-color: var(--fire-2)"/><stop offset="1" style="stop-color: var(--red-hot)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- Tela de carregamento -->
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <div class="loader__inner">
+    <div class="loader__gauge">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="90" fill="none" stroke="rgb(255 255 255 / .08)" stroke-width="4" stroke-dasharray="424 566" transform="rotate(135 100 100)"/>
+        <circle id="loaderArc" cx="100" cy="100" r="90" fill="none" stroke="url(#gSpeed)" stroke-width="4" stroke-linecap="round" stroke-dasharray="0 566" transform="rotate(135 100 100)"/>
+      </svg>
+      <svg class="loader__r" viewBox="0 0 450 330" aria-hidden="true">
+        <path d="M2 14 L120 4 L120 327 L4 232 Z"/>
+        <path d="M130 4 L302 4 L444 167 L272 167 L130 17 Z"/>
+        <path d="M130 180 L282 180 L444 324 L287 324 L130 187 Z"/>
+      </svg>
+    </div>
+    <div class="loader__pct num" id="loaderPct">0%</div>
+    <div class="loader__label">Aquecendo o motor</div>
+  </div>
+</div>
+
+<div class="redline" aria-hidden="true"><div class="redline__fill" id="redline"></div></div>
+
+<!-- Navegação -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="#topo" class="nav__logo" aria-label="Rodscar, início"><img src="assets/img/logo-rodscar.png" alt="Rodscar" width="282" height="72"></a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#estoque">Estoque</a>
+      <a href="#vender">Vender meu veículo</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#depoimentos">Clientes</a>
+      <a href="#contato">Onde estamos</a>
+    </nav>
+    <a class="btn btn--red nav__cta" href="https://wa.me/5598987496911?text=Ol%C3%A1%2C%20Rodscar!%20Vim%20pelo%20site." target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Falar no WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- CENA 1 · LARGADA (hero) -->
+  <section class="scene scene--hero" id="cenaLargada" data-end="0.62" aria-label="Largada">
+    <div class="scene__sticky">
+      <img class="scene__poster" src="assets/img/hero-a.jpg" alt="" aria-hidden="true">
+      <video class="scene__video" data-src="assets/video/hero.mp4" poster="assets/img/hero-a.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="scene__shade"></div>
+      <div class="scene__flash" id="heroFlash"></div>
+      <canvas class="scene__fx" id="heroFx" aria-hidden="true"></canvas>
+
+      <div class="signal" id="signal" data-state="red" aria-hidden="true"><i></i><i></i><i></i><b id="signalTxt">Aguarde</b></div>
+
+      <div class="scene__copy">
+        <div class="wrap">
+          <div class="scene__lines">
+            <h1 class="scene__line" data-from="0" data-to="0.3"><span>No grid,</span><span>esperando <em>você.</em></span></h1>
+            <p class="scene__line" data-from="0.3" data-to="0.62"><span class="go">Sinal verde</span><span>pra acelerar.</span></p>
+            <p class="scene__line" data-from="0.62" data-to="1.01"><span>Compra, venda</span><span>e <em>troca.</em></span></p>
+          </div>
+          <p class="scene__sub">Carros e motos seminovos em São Luís, com procedência, avaliação na hora e financiamento facilitado.</p>
+          <div class="scene__cta">
+            <a class="btn btn--red" href="#estoque">Ver estoque <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#vender">Avaliar meu veículo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="speedo" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <g id="speedoTicks"></g>
+          <circle class="speedo__arc-bg" cx="100" cy="100" r="80" stroke-dasharray="376.99 502.65" transform="rotate(135 100 100)"/>
+          <circle class="speedo__arc" id="speedoArc" cx="100" cy="100" r="80" stroke-dasharray="0 502.65" transform="rotate(135 100 100)"/>
+          <g class="speedo__needle" id="speedoNeedle"><line x1="100" y1="100" x2="100" y2="34"/></g>
+          <circle class="speedo__hub" cx="100" cy="100" r="9"/>
+        </svg>
+        <div class="speedo__val"><strong class="num" id="speedoVal">0</strong><small>km/h</small></div>
+      </div>
+
+      <div class="scroll-hint" id="scrollHint"><div class="scroll-hint__mouse"></div>Role para dar a largada</div>
+    </div>
+  </section>
+
+  <!-- Números + faixa -->
+  <section class="stats" aria-label="Números">
+    <div class="stats__grid">
+      <div class="stat rv"><strong class="num"><span data-count="carros">0</span></strong><span>carros seminovos no estoque</span></div>
+      <div class="stat rv" style="--i:1"><strong class="num"><span data-count="motos">0</span></strong><span>motos prontas para rodar</span></div>
+      <div class="stat rv" style="--i:2"><strong class="num"><span data-count-to="24">0</span><i>h</i></strong><span>para responder sua avaliação</span></div>
+      <div class="stat rv" style="--i:3"><strong class="num"><span data-count-to="60">0</span><i>x</i></strong><span>parcelas no financiamento</span></div>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track"><span>Compra</span><span>Venda</span><span>Troca</span><span>Financiamento</span><span>Carros</span><span>Motos</span><span>Seminovos</span><span>São Luís</span></div>
+      <div class="marquee__track"><span>Compra</span><span>Venda</span><span>Troca</span><span>Financiamento</span><span>Carros</span><span>Motos</span><span>Seminovos</span><span>São Luís</span></div>
+    </div>
+  </section>
+
+  <!-- CENA 2 · O R SE MONTA -->
+  <section class="scene scene--mid" id="cenaR" data-end="0.72" aria-label="Confiança Rodscar">
+    <div class="scene__sticky">
+      <img class="scene__poster" src="assets/img/r-a.jpg" alt="" aria-hidden="true" loading="lazy">
+      <video class="scene__video" data-src="assets/video/r.mp4" poster="assets/img/r-a.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="scene__shade"></div>
+      <canvas class="scene__fx" id="rFx" aria-hidden="true"></canvas>
+
+      <div class="facets" aria-hidden="true">
+        <div class="facet"><span>Procedência <b id="f1v">0%</b></span><div class="facet__bar"><i id="f1"></i></div></div>
+        <div class="facet"><span>Vistoria <b id="f2v">0%</b></span><div class="facet__bar"><i id="f2"></i></div></div>
+        <div class="facet"><span>Documentação <b id="f3v">0%</b></span><div class="facet__bar"><i id="f3"></i></div></div>
+      </div>
+
+      <div class="scene__copy">
+        <div class="wrap">
+          <div class="scene__lines">
+            <h2 class="scene__line" data-from="0" data-to="0.36"><span>Peça</span><span>por <em>peça.</em></span></h2>
+            <p class="scene__line" data-from="0.36" data-to="0.72"><span>Procedência</span><span><em>conferida.</em></span></p>
+            <p class="scene__line" data-from="0.72" data-to="1.01"><span>Confiança</span><span><em>montada.</em></span></p>
+          </div>
+          <p class="scene__sub">Na Rodscar cada veículo passa por vistoria, checagem de documentos e histórico antes de chegar ao nosso pátio. Você compra sabendo exatamente o que está levando.</p>
+          <div class="scene__cta">
+            <a class="btn btn--red" href="#estoque">Conhecer o estoque <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTOQUE -->
+  <section class="sec estoque" id="estoque" aria-labelledby="estoqueTitulo">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <span class="eyebrow rv">Estoque Rodscar</span>
+          <h2 class="h-sec rv" style="--i:1" id="estoqueTitulo">Escolha o seu <em>próximo.</em></h2>
+          <p class="lead rv" style="--i:2">Carros e motos seminovos, revisados e prontos para a transferência. Toque na foto para ver os detalhes.</p>
+        </div>
+      </div>
+
+      <div class="filters rv" style="--i:2">
+        <div class="tabs" role="tablist" aria-label="Tipo de veículo">
+          <button class="tab is-on" role="tab" aria-selected="true" data-tipo="todos">Todos <small id="cTodos"></small></button>
+          <button class="tab" role="tab" aria-selected="false" data-tipo="carro">Carros <small id="cCarros"></small></button>
+          <button class="tab" role="tab" aria-selected="false" data-tipo="moto">Motos <small id="cMotos"></small></button>
+        </div>
+        <div class="selects">
+          <label class="field">Marca<select id="fMarca"><option value="">Todas</option></select></label>
+          <label class="field">Preço<select id="fPreco">
+            <option value="">Qualquer valor</option>
+            <option value="0-30000">Até R$ 30 mil</option>
+            <option value="30000-100000">R$ 30 a 100 mil</option>
+            <option value="100000-200000">R$ 100 a 200 mil</option>
+            <option value="200000-99999999">Acima de R$ 200 mil</option>
+          </select></label>
+          <label class="field">Ordenar<select id="fOrdem">
+            <option value="novo">Mais novos</option>
+            <option value="menor">Menor preço</option>
+            <option value="maior">Maior preço</option>
+            <option value="km">Menor km</option>
+          </select></label>
+        </div>
+      </div>
+
+      <div class="grid" id="grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- CENA 3 · IGNIÇÃO -->
+  <section class="scene scene--mid" id="cenaIgnicao" data-end="0.72" aria-label="Venda seu veículo">
+    <div class="scene__sticky">
+      <img class="scene__poster" src="assets/img/ign-a.jpg" alt="" aria-hidden="true" loading="lazy">
+      <video class="scene__video" data-src="assets/video/ignicao.mp4" poster="assets/img/ign-a.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="scene__shade"></div>
+
+      <div class="tacho" aria-hidden="true">
+        <svg viewBox="0 0 300 90" id="tachoSvg"></svg>
+        <div class="tacho__read"><strong class="num" id="tachoVal">0.0</strong><small>x1000 rpm</small></div>
+      </div>
+
+      <div class="scene__copy">
+        <div class="wrap">
+          <div class="scene__lines">
+            <h2 class="scene__line" data-from="0" data-to="0.36"><span>Gire</span><span>a <em>chave.</em></span></h2>
+            <p class="scene__line" data-from="0.36" data-to="0.72"><span>Seu usado</span><span>vale <em>mais</em> aqui.</span></p>
+            <p class="scene__line" data-from="0.72" data-to="1.01"><span>Avaliação</span><span>na <em>hora.</em></span></p>
+          </div>
+          <p class="scene__sub">Quer vender ou dar seu carro ou moto como entrada? Mande os dados pelo WhatsApp e receba a proposta da Rodscar.</p>
+          <div class="scene__cta">
+            <a class="btn btn--red" href="#vender">Avaliar meu veículo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENDA / TROCA -->
+  <section class="sec venda" id="vender" aria-labelledby="vendaTitulo">
+    <div class="wrap venda__grid">
+      <div class="venda__photo rv">
+        <img src="assets/img/entrega.jpg" alt="Vendedor da Rodscar entregando a chave de um carro vermelho ao cliente" loading="lazy" data-parallax="40">
+        <div class="venda__tag"><strong class="num">01</strong><span>chave na mão, negócio fechado.</span></div>
+      </div>
+      <div>
+        <span class="eyebrow rv">Venda ou troca</span>
+        <h2 class="h-sec rv" style="--i:1" id="vendaTitulo">Quanto vale o <em>seu?</em></h2>
+        <p class="lead rv" style="--i:2">Preencha em 30 segundos. A mensagem já vai pronta para o nosso WhatsApp e a gente responde com a avaliação.</p>
+
+        <form class="form rv" style="--i:3" id="formVenda" novalidate>
+          <div class="seg" role="radiogroup" aria-label="Tipo de veículo">
+            <label><input type="radio" name="tipo" value="Carro" checked><span>Carro</span></label>
+            <label><input type="radio" name="tipo" value="Moto"><span>Moto</span></label>
+          </div>
+          <label class="field">Marca e modelo<input name="modelo" required placeholder="Ex.: Honda Civic EXL" autocomplete="off"></label>
+          <div class="form__row">
+            <label class="field">Ano<input name="ano" inputmode="numeric" maxlength="4" placeholder="2020"></label>
+            <label class="field">Km rodados<input name="km" inputmode="numeric" placeholder="45.000"></label>
+          </div>
+          <div class="form__row">
+            <label class="field">Seu nome<input name="nome" autocomplete="given-name" placeholder="Como te chamamos?"></label>
+            <label class="field">Interesse<select name="interesse">
+              <option>Vender</option><option>Trocar por outro</option><option>Dar de entrada</option>
+            </select></label>
+          </div>
+          <button class="btn btn--wa" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
+          <p class="form__note">Abre o WhatsApp com a mensagem pronta. Nada é enviado sem você confirmar.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="sec" id="como-funciona" aria-labelledby="comoTitulo">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <span class="eyebrow rv">Como funciona</span>
+          <h2 class="h-sec rv" style="--i:1" id="comoTitulo">Do pátio à <em>sua garagem.</em></h2>
+        </div>
+      </div>
+      <div class="steps" id="steps">
+        <div class="steps__track" aria-hidden="true">
+          <svg viewBox="0 0 1000 64" preserveAspectRatio="none">
+            <path class="t-bg" d="M10 40 C 180 0, 320 64, 500 32 S 820 0, 990 36"/>
+            <path class="t-fg" id="trackPath" d="M10 40 C 180 0, 320 64, 500 32 S 820 0, 990 36"/>
+          </svg>
+        </div>
+        <article class="step rv" style="--i:0"><div class="step__n num">01</div><h3>Escolha no estoque</h3><p>Veja fotos, ano, km e preço aqui no site ou venha conhecer o pátio no Posto Ana Terra.</p></article>
+        <article class="step rv" style="--i:1"><div class="step__n num">02</div><h3>Avaliamos seu usado</h3><p>Seu carro ou moto pode entrar como parte do pagamento. Avaliação rápida e justa.</p></article>
+        <article class="step rv" style="--i:2"><div class="step__n num">03</div><h3>Financiamento e papelada</h3><p>Simulamos o financiamento com os principais bancos e cuidamos da transferência.</p></article>
+        <article class="step rv" style="--i:3"><div class="step__n num">04</div><h3>Chave na mão</h3><p>Veículo revisado, documentação em dia e você saindo rodando.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="sec depo" id="depoimentos" aria-labelledby="depoTitulo">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <span class="eyebrow rv">Clientes Rodscar</span>
+          <h2 class="h-sec rv" style="--i:1" id="depoTitulo">Quem acelerou <em>com a gente.</em></h2>
+        </div>
+        <a class="btn btn--ghost rv" style="--i:2" href="https://www.instagram.com/_rodscar/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Ver entregas no Instagram</a>
+      </div>
+      <div class="depo__grid">
+        <figure class="quote rv" style="--i:0">
+          <div class="quote__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote><p>Troquei meu hatch por um SUV e saí no mesmo dia. Avaliaram meu carro de forma justa e resolveram toda a papelada.</p></blockquote>
+          <figcaption class="quote__who"><img src="assets/img/dep1.jpg" alt="Foto da cliente Larissa" loading="lazy" width="56" height="56"><div><b>Larissa M.</b><small>Comprou um SUV</small></div></figcaption>
+        </figure>
+        <figure class="quote rv" style="--i:1">
+          <div class="quote__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote><p>Primeira moto, financiada em parcelas que couberam no bolso. Atendimento pelo WhatsApp do começo ao fim.</p></blockquote>
+          <figcaption class="quote__who"><img src="assets/img/dep2.jpg" alt="Foto do cliente Diego" loading="lazy" width="56" height="56"><div><b>Diego S.</b><small>Comprou uma moto</small></div></figcaption>
+        </figure>
+        <figure class="quote rv" style="--i:2">
+          <div class="quote__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote><p>Já é a segunda caminhonete que compro na Rodscar. Veículo revisado, sem surpresa e com gente séria.</p></blockquote>
+          <figcaption class="quote__who"><img src="assets/img/dep3.jpg" alt="Foto do cliente Raimundo" loading="lazy" width="56" height="56"><div><b>Raimundo C.</b><small>Cliente desde 2022</small></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAL -->
+  <section id="contato" aria-labelledby="localTitulo">
+    <div class="local__hero">
+      <img src="assets/img/loja.jpg" alt="Pátio da Rodscar à noite com carros e motos" loading="lazy" data-parallax="60">
+      <div class="local__title"><div class="wrap"><span class="eyebrow">Onde estamos</span><h2 class="local__mask" id="localTitulo">São Luís · MA</h2></div></div>
+    </div>
+    <div class="sec" style="padding-top:0">
+      <div class="wrap local__grid">
+        <div class="info rv">
+          <div class="info__row"><svg aria-hidden="true"><use href="#i-pin"/></svg><div><small>Endereço</small>Posto Ana Terra · Av. João Pessoa<br>Sacavém / Filipinho · São Luís - MA</div></div>
+          <div class="info__row"><svg aria-hidden="true"><use href="#i-wa"/></svg><div><small>WhatsApp</small><a href="https://wa.me/5598987496911" target="_blank" rel="noopener">+55 98 98749-6911</a></div></div>
+          <div class="info__row"><svg aria-hidden="true"><use href="#i-ig"/></svg><div><small>Instagram</small><a href="https://www.instagram.com/_rodscar/" target="_blank" rel="noopener">@_rodscar</a></div></div>
+          <div class="info__row"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><small>Atendimento</small>Fale com a gente pelo WhatsApp para agendar sua visita</div></div>
+          <a class="btn btn--red" href="https://www.google.com/maps/search/?api=1&query=Posto+Ana+Terra+Av+Jo%C3%A3o+Pessoa+S%C3%A3o+Lu%C3%ADs+MA" target="_blank" rel="noopener">Traçar rota <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="map rv" style="--i:1">
+          <iframe title="Mapa: Posto Ana Terra, Av. João Pessoa, São Luís - MA" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Posto+Ana+Terra,+Av.+Jo%C3%A3o+Pessoa,+S%C3%A3o+Lu%C3%ADs+-+MA&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq" aria-labelledby="faqTitulo" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow rv">Dúvidas</span>
+      <h2 class="h-sec rv" style="--i:1; margin-bottom: var(--s5)" id="faqTitulo">Perguntas <em>frequentes.</em></h2>
+      <div class="faq__list">
+        <details class="rv"><summary>Vocês financiam carros e motos?<i aria-hidden="true"></i></summary><p>Sim. Simulamos o financiamento com os principais bancos e financeiras, com ou sem entrada, e você escolhe a parcela que cabe no bolso.</p></details>
+        <details class="rv"><summary>Aceitam meu veículo como parte do pagamento?<i aria-hidden="true"></i></summary><p>Aceitamos carro e moto na troca. Envie os dados pelo formulário acima ou pelo WhatsApp e respondemos com a avaliação.</p></details>
+        <details class="rv"><summary>Os veículos têm procedência?<i aria-hidden="true"></i></summary><p>Todo veículo passa por vistoria e checagem de documentação, multas e histórico antes de entrar no estoque.</p></details>
+        <details class="rv"><summary>Vocês compram meu carro ou moto à vista?<i aria-hidden="true"></i></summary><p>Sim. Se você só quer vender, fazemos uma proposta de compra. Mande ano, modelo e km pelo WhatsApp.</p></details>
+        <details class="rv"><summary>Posso ver o veículo pessoalmente?<i aria-hidden="true"></i></summary><p>Claro. Estamos no Posto Ana Terra, Av. João Pessoa, Sacavém/Filipinho. Chame no WhatsApp para agendar sua visita.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final" id="final" aria-labelledby="finalTitulo">
+    <img class="final__bg" src="assets/img/r-a.jpg" alt="" aria-hidden="true" loading="lazy">
+    <canvas class="final__fx" id="finalFx" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <span class="eyebrow rv">Bora?</span>
+      <h2 class="rv" style="--i:1; margin-top: var(--s2)" id="finalTitulo">Acelera que o <em>próximo</em><br>é seu.</h2>
+      <p class="rv" style="--i:2">Compra, venda, troca e financiamento de carros e motos seminovos. Um WhatsApp e a gente resolve.</p>
+      <div class="final__btns rv" style="--i:3">
+        <a class="btn btn--red btn-fire" href="https://wa.me/5598987496911?text=Ol%C3%A1%2C%20Rodscar!%20Quero%20saber%20mais%20sobre%20o%20estoque." target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg>Chamar no WhatsApp
+          <span class="exhaust" aria-hidden="true"><i class="flame flame--3"></i><i class="flame"></i><i class="flame flame--2"></i></span>
+        </a>
+        <a class="btn btn--ghost" href="#estoque">Ver estoque</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <a href="#topo" class="foot__logo" aria-label="Rodscar, voltar ao início"><img src="assets/img/logo-rodscar.png" alt="Rodscar" width="282" height="72" loading="lazy"></a>
+        <p style="margin-top: var(--s2); max-width: 36ch">Compra, venda e troca de carros e motos seminovos em São Luís - MA.</p>
+        <div class="foot__social">
+          <a href="https://www.instagram.com/_rodscar/" target="_blank" rel="noopener" aria-label="Instagram da Rodscar"><svg><use href="#i-ig"/></svg></a>
+          <a href="https://wa.me/5598987496911" target="_blank" rel="noopener" aria-label="WhatsApp da Rodscar"><svg><use href="#i-wa"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Navegue</h4><ul><li><a href="#estoque">Estoque</a></li><li><a href="#vender">Vender meu veículo</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#faq">Dúvidas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a href="https://wa.me/5598987496911" target="_blank" rel="noopener">+55 98 98749-6911</a></li><li><a href="https://www.instagram.com/_rodscar/" target="_blank" rel="noopener">@_rodscar</a></li></ul></div>
+      <div><h4>Endereço</h4><ul><li>Posto Ana Terra</li><li>Av. João Pessoa</li><li>Sacavém / Filipinho</li><li>São Luís - MA</li></ul></div>
+    </div>
+    <div class="foot__bottom"><span>© 2026 Rodscar®. Todos os direitos reservados.</span><span>Fotos meramente ilustrativas.</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="https://wa.me/5598987496911?text=Ol%C3%A1%2C%20Rodscar!%20Vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Falar com a Rodscar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<!-- Modal do veículo -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="modal__box">
+    <button class="modal__close" id="mClose" aria-label="Fechar">×</button>
+    <img class="modal__img" id="mImg" alt="">
+    <div class="modal__info">
+      <div><div class="card__brand" id="mBrand"></div><h3 class="card__model" id="mTitle" style="font-size: var(--fs-xl)"></h3></div>
+      <div class="specs" id="mSpecs"></div>
+      <div class="price"><small>Preço</small><strong class="num" id="mPrice"></strong></div>
+      <a class="btn btn--wa" id="mWa" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Tenho interesse</a>
+      <p class="form__note">Consulte condições de financiamento e troca. Foto ilustrativa.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/estoque.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
